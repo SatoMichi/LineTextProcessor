@@ -76,8 +76,8 @@ def showAllDaysGraph(data):
     d = int(data[-1]["Time"][8:10])
     end = datetime.date(y,m,d)
     daysList = [start]
+    delta = datetime.timedelta(1)
     while not start == end:
-        delta = datetime.timedelta(1)
         start += delta
         daysList.append(start)
     daysList.append(end)
